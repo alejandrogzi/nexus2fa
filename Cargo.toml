@@ -1,0 +1,21 @@
+[package]
+name = "nexus2fa"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+description = "converts .nex to .fa plain simple"
+homepage = "https://github.com/alejandrogzi/nexus2fa"
+repository = "https://github.com/alejandrogzi/nexus2fa"
+readme = "README.md"
+keywords = ["nexus", "phylogeny", "genome", "fasta"]
+categories = ["command-line-utilities", "science"]
+
+[dependencies]
+memchr = "2.7"
+clap = { version = "4.0", features = ["derive"] }
+num_cpus = "1.14.0"
+memmap2 = "0.9.4"
+rayon = "1.10.0"
+
+[profile.release]
+lto = true
